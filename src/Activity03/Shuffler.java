@@ -50,8 +50,20 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void perfectShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
-	}
+            int[] deck1 = new int[values.length / 2];
+            int[] deck2 = new int[values.length / 2];
+            
+            for (int i = 0; i < values.length / 2; i++){
+                deck1[i] = values[i];
+            }
+            
+            for(int index = 0; index < values.length; index++){
+                newDeck[mainIn] = deck1[index];
+                mainIn++;
+                newDeck[mainIn] = deck2[index];
+                mainIn++;
+            }
+        }
 
 	/**
 	 * Apply an "efficient selection shuffle" to the argument.
